@@ -4,9 +4,9 @@ TaskForge is a modern task management system built across multiple frontend fram
 
 ## 🚀 Implementations
 
-- ⚛️ React → https://github.com/YOUR-USERNAME/taskforge-react
-- ▲ Next.js → https://github.com/YOUR-USERNAME/taskforge-next
-- 🟢 Vue → https://github.com/YOUR-USERNAME/taskforge-vue
+- ⚛️ React → https://github.com/ibeO-GH/taskforge-react
+- ▲ Next.js → https://github.com/ibeO-GH/taskforge-next
+- 🟢 Vue → https://github.com/ibeO-GH/taskforge-vue
 
 ## ✨ Features
 
