@@ -26,8 +26,22 @@ export default function App() {
         </div>
       </section>
 
+      <section className="max-w-3xl mx-auto mt-12 text-center space-y-4">
+        <h2 className="text-2xl sm:text-3xl font-semibold text-white">
+          Why TaskForge?
+        </h2>
+
+        <p className="text-gray-400 text-base sm:text-lg leading-relaxed">
+          TaskForge was built to explore how a single product can be implemented
+          across multiple frontend frameworks while maintaining consistent
+          functionality and user experience. It highlights architectural
+          decisions, state management strategies, and UI scalability across
+          React, Next.js, and Vue.
+        </p>
+      </section>
+
       {/* FRAMEWORK CARDS */}
-      <section className="max-w-6xl mx-auto mt-16 grid gap-6 sm:grid-cols-3">
+      <section className="max-w-6xl mx-auto mt-20 grid gap-6 sm:grid-cols-3">
         {/* React */}
         <a
           href="https://taskforge-react-sable.vercel.app/"
