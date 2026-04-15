@@ -30,7 +30,7 @@ export default function App() {
       <section className="max-w-6xl mx-auto mt-16 grid gap-6 sm:grid-cols-3">
         {/* React */}
         <a
-          href="https://your-react-deployment-link.com"
+          href="https://taskforge-react-sable.vercel.app/"
           target="_blank"
           className="group bg-gray-800 border border-gray-700 rounded-xl p-6 hover:border-blue-500 transition"
         >
