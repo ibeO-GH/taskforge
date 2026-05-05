@@ -8,9 +8,10 @@ export default function App() {
         </h1>
 
         <p className="text-gray-400 text-lg sm:text-xl max-w-2xl mx-auto">
-          A multi-framework task management system showcasing how the same
-          product can be engineered across React, Next.js, and Vue — built for
-          scalability, architecture clarity, and real-world frontend design.
+          A full-stack, multi-client task management system where React,
+          Next.js, and Vue applications share a unified backend API — designed
+          to demonstrate scalable architecture, consistent business logic, and
+          real-world frontend engineering patterns.
         </p>
 
         <div className="flex justify-center gap-3 pt-4">
@@ -23,6 +24,9 @@ export default function App() {
           <span className="px-3 py-1 text-xs rounded-full bg-gray-800 border border-gray-700">
             Vue
           </span>
+          <span className="px-3 py-1 text-xs rounded-full bg-blue-900/40 border border-gray-700 text-blue-300">
+            Node.js API
+          </span>
         </div>
       </section>
 
@@ -32,12 +36,82 @@ export default function App() {
         </h2>
 
         <p className="text-gray-400 text-base sm:text-lg leading-relaxed">
-          TaskForge was built to explore how a single product can be implemented
-          across multiple frontend frameworks while maintaining consistent
-          functionality and user experience. It highlights architectural
-          decisions, state management strategies, and UI scalability across
-          React, Next.js, and Vue.
+          TaskForge was built to explore how different frontend frameworks can
+          operate on a shared backend without duplicating logic. The goal is to
+          demonstrate how architecture decisions impact scalability,
+          maintainability, and developer experience in real-world applications.
         </p>
+      </section>
+
+      <section className="max-w-4xl mx-auto mt-16 space-y-6 text-center">
+        <h2 className="text-2xl sm:text-3xl font-semibold text-white">
+          System Architecture
+        </h2>
+
+        <p className="text-gray-400 max-w-2xl mx-auto">
+          The system is designed as a shared API architecture where multiple
+          frontend clients consume a single backend service. This enables
+          centralized data management, consistent validation, and reusable
+          business logic while allowing each frontend to evolve independently.
+        </p>
+
+        <div className="flex flex-wrap justify-center gap-3 pt-2">
+          <span className="px-3 py-1 text-xs rounded-full bg-gray-800 border border-gray-700">
+            React Client
+          </span>
+          <span className="px-3 py-1 text-xs rounded-full bg-gray-800 border border-gray-700">
+            Next.js Client
+          </span>
+          <span className="px-3 py-1 text-xs rounded-full bg-gray-800 border border-gray-700">
+            Vue Client
+          </span>
+          <span className="px-3 py-1 text-xs rounded-full bg-gray-800 border border-gray-700">
+            Shared REST API
+          </span>
+          <span className="px-3 py-1 text-xs rounded-full bg-gray-800 border border-gray-700">
+            MongoDB Atlas
+          </span>
+        </div>
+      </section>
+
+      <section className="max-w-4xl mx-auto mt-16 text-center space-y-6">
+        <h2 className="text-2xl sm:text-3xl font-semibold text-white">
+          Project Resources
+        </h2>
+
+        <div className="flex flex-wrap justify-center gap-3">
+          <a
+            href="https://github.com/ibeO-GH/taskforge"
+            target="_blank"
+            className="px-4 py-2 text-sm border border-gray-700 rounded-lg hover:bg-gray-800"
+          >
+            System Repo
+          </a>
+
+          <a
+            href="https://github.com/ibeO-GH/taskforge-react"
+            target="_blank"
+            className="px-4 py-2 text-sm border border-gray-700 rounded-lg hover:bg-gray-800"
+          >
+            React App
+          </a>
+
+          <a
+            href="https://github.com/ibeO-GH/taskforge-backend"
+            target="_blank"
+            className="px-4 py-2 text-sm border border-gray-700 rounded-lg hover:bg-gray-800"
+          >
+            Backend API
+          </a>
+
+          <a
+            href="https://taskforge-api-z21d.onrender.com"
+            target="_blank"
+            className="px-4 py-2 text-sm border border-gray-700 rounded-lg hover:bg-gray-800"
+          >
+            Live API
+          </a>
+        </div>
       </section>
 
       {/* FRAMEWORK CARDS */}
@@ -68,10 +142,10 @@ export default function App() {
             TaskForge Next.js
           </h2>
           <p className="text-gray-400 mt-2 text-sm">
-            SSR-focused version demonstrating routing, server rendering, and
-            performance-first architecture.
+            In progress — will demonstrate SSR, routing, and performance
+            patterns.
           </p>
-          <p className="mt-4 text-green-400 text-sm">Open →</p>
+          <p className="mt-4 text-green-400 text-sm">Coming soon</p>
         </a>
 
         {/* Vue */}
@@ -84,16 +158,17 @@ export default function App() {
             TaskForge Vue
           </h2>
           <p className="text-gray-400 mt-2 text-sm">
-            Composition API implementation showing reactive state management and
-            Vue ecosystem patterns.
+            In progress — will demonstrate reactive state management and Vue
+            ecosystem patterns.
           </p>
-          <p className="mt-4 text-purple-400 text-sm">Open →</p>
+          <p className="mt-4 text-purple-400 text-sm">Coming soon</p>
         </a>
       </section>
 
       {/* FOOTER */}
       <footer className="text-center text-gray-500 text-sm mt-20">
-        Built as a frontend architecture showcase — TaskForge System © 2026
+        Built as a multi-framework architecture experiment — TaskForge System ©
+        2026
       </footer>
     </div>
   );
