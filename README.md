@@ -1,102 +1,205 @@
-# 🚀 TaskForge
+# TaskForge — Multi-Client Task Management System
 
-A modern multi-framework task management system showcasing real-world frontend engineering across **React, Next.js, and Vue**.
+TaskForge is a full-stack task management system designed to demonstrate how multiple frontend applications can operate on a shared backend architecture.
 
-This project is designed as a **portfolio-grade system architecture demo**, not just a single app — highlighting how the same product can be implemented across different frameworks.
-
----
-
-## 🧠 Overview
-
-TaskForge demonstrates:
-
-- Scalable frontend architecture
-- State management patterns
-- Drag & drop interactions
-- Filtering, sorting, and pagination
-- Persistent local database storage
-- Multi-framework implementation strategy
+The system consists of multiple clients (React, Next.js, Vue) that consume a single REST API, enabling consistent business logic, centralized data management, and scalable frontend development.
 
 ---
 
-## 🧩 Project Structure
+## 🚀 Live System
 
-taskforge/
-│
-├── taskforge-react/ # React + TypeScript implementation (main feature-rich version)
-├── taskforge-nextjs/ # Next.js version (SSR + routing architecture)
-├── taskforge-vue/ # Vue implementation (composition API)
-│
-└── taskforge/ # This repository (landing page + portfolio hub)
+- 🌐 Landing Page: https://taskforge-eta.vercel.app/
+- ⚛️ React App: https://taskforge-react-sable.vercel.app/
+- 🔌 API: https://taskforge-api-z21d.onrender.com
 
 ---
 
+## 🧠 Core Idea
+
+Instead of building isolated frontend apps, TaskForge explores:
+
+- How different frameworks can share the same backend
+- How to centralize business logic and validation
+- How to maintain consistency across multiple clients
+- How to design scalable frontend + backend systems
+
+This reflects how real-world products are structured.
+
 ---
 
-## 🌐 Live System Concept
+## 🏗️ System Architecture
 
-This project is deployed as a connected ecosystem:
+TaskForge follows a **multi-client architecture**:
+React App Next.js App Vue App
+\ | /
+\ | /
+Shared REST API
+|
+MongoDB Atlas
 
-- **Landing Page (this repo)** → TaskForge hub
-- **React App** → Feature-complete version (current focus)
-- **Next.js App** → SSR + routing showcase
-- **Vue App** → Alternative framework implementation
+---
+
+### Key Characteristics
+
+- Single backend serving multiple clients
+- Centralized data storage and validation
+- Independent frontend implementations
+- Scalable and extensible structure
 
 ---
 
 ## ⚙️ Tech Stack
 
-- React 18 + TypeScript
-- Vite
-- TanStack Query
-- TanStack Router
-- IndexedDB (Dexie)
-- Tailwind CSS
+### Frontend (React — Completed)
+
+- React + TypeScript
+- React Query (data fetching & caching)
+- Tailwind CSS (UI styling)
 - dnd-kit (drag and drop)
-- Vue 3 (separate repo)
-- Next.js 14 (separate repo)
+- TanStack Router
+
+### Backend
+
+- Node.js
+- Express
+- MongoDB (Mongoose)
+- REST API architecture
+- Bulk operations for task reordering
+
+### Planned Clients
+
+- Next.js (SSR + routing patterns)
+- Vue (Composition API + reactivity)
 
 ---
 
-## ✨ Features (React version)
+## ✨ Features
 
-- Create / edit / delete tasks
-- Advanced filtering (status, priority, search)
+### Task Management
+
+- Create, update, delete tasks
+- Status tracking (todo, in-progress, done)
+- Priority levels (low, medium, high)
+
+### UI/UX
+
+- Responsive design
+- Real-time UI updates via React Query
+- Inline editing
+- Confirmation flows for destructive actions
+
+### Data Handling
+
+- Persistent storage (MongoDB Atlas)
+- Server-side validation
+- Optimized querying and sorting
+
+### Advanced Functionality
+
+- Filtering (status + priority)
+- Search functionality
 - Pagination system
-- Drag & drop reordering (manual mode)
-- Persistent local storage (IndexedDB)
-- Responsive UI design
-- Optimized state synchronization
+- Drag-and-drop reordering
+- Backend-synced ordering using bulk updates
 
 ---
 
-## 🎯 Purpose
+## 🔌 API Overview
 
-TaskForge is built to demonstrate:
-
-> “How a production-level feature set can be implemented consistently across multiple frontend frameworks.”
-
-This is a **systems design + frontend architecture portfolio piece**, not just a CRUD app.
+Base URL: https://taskforge-api-z21d.onrender.com/
 
 ---
 
-## 🚀 Deployment Strategy
+### Endpoints
 
-Each part is deployed independently:
-
-- `taskforge-react` → Vercel
-- `taskforge-nextjs` → Vercel
-- `taskforge-vue` → Vercel
-- `taskforge` (this repo) → GitHub Pages or Vercel static site
-
----
-
-## 📌 Author
-
-Built by a frontend engineer focused on scalable UI systems, real-world architecture, and production-ready React applications.
+| Method | Endpoint       | Description        |
+| ------ | -------------- | ------------------ |
+| GET    | /tasks         | Fetch all tasks    |
+| POST   | /tasks         | Create a task      |
+| PUT    | /tasks/:id     | Update a task      |
+| DELETE | /tasks/:id     | Delete a task      |
+| PUT    | /tasks/reorder | Bulk reorder tasks |
 
 ---
 
-## 🧭 Status
+## 📦 Repositories
 
-🚧 In active development — React version is feature-complete, Next.js and Vue versions in progress.
+- 🧩 System (Landing): https://github.com/ibeO-GH/taskforge
+- ⚛️ React Client: https://github.com/ibeO-GH/taskforge-react
+- 🛠 Backend API: https://github.com/ibeO-GH/taskforge-backend
+
+---
+
+## 🧪 Local Development
+
+### Clone Repositories
+
+```bash
+git clone https://github.com/ibeO-GH/taskforge
+git clone https://github.com/ibeO-GH/taskforge-react
+git clone https://github.com/ibeO-GH/taskforge-backend
+
+```
+
+---
+
+## Backend Setup
+
+```bash
+cd taskforge-backend
+npm install
+
+```
+
+#### Create .env file:
+
+MONGO_URI=your_mongodb_connection_string
+PORT=5000
+
+```bash
+npm run dev
+
+```
+
+---
+
+## Frontend Setup
+
+```bash
+cd taskforge-react
+npm install
+npm run dev
+
+```
+
+---
+
+## 📈 What This Project Demonstrates
+
+- Designing scalable frontend architectures
+- Building and consuming REST APIs
+- Managing server-state with React Query
+- Structuring multi-client systems
+- Handling real-world UI complexity (filters, pagination, drag & drop)
+- Deploying full-stack applications (Vercel + Render)
+
+---
+
+## 🔮 Future Improvements
+
+- Complete Next.js and Vue implementations
+- Authentication system (JWT)
+- Role-based access control
+- Real-time updates (WebSockets)
+- Offline-first support
+- Unit and integration testing
+
+---
+
+## 👤 Author
+
+Okorafor Ibe
+
+- Portfolio: https://ibe-portfolio-tau.vercel.app/
+- GitHub: https://github.com/ibeO-GH
+- LinkedIn: https://www.linkedin.com/in/okorafor-ibe-1b79192b7/
